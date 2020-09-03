@@ -24,3 +24,9 @@ kubectl -n argo port-forward deployment/argo-server 2746:2746
 ```
 
 This will serve the user interface on http://localhost:2746
+
+Next, Download the latest Argo CLI from releases page and test installation
+
+```bash
+argo version
+```
