@@ -38,3 +38,24 @@ Finally, submit an example workflow:
 argo submit -n argo --watch hello-world.yaml
 ```
 
+## Verify Argo Workflows
+
+Argo adds a new kind of Kubernetes spec called a Workflow. The above spec contains a single template called whalesay which runs the docker/whalesay container and invokes cowsay "hello world". The whalesay template is the entrypoint for the spec. The entrypoint specifies the initial template that should be invoked when the workflow spec is executed by Kubernetes. 
+
+```bash
+argo logs -n argo @latest
+  _____________ 
+ < hello world >
+  ------------- 
+     \
+      \
+       \     
+                     ##        .            
+               ## ## ##       ==            
+            ## ## ## ##      ===            
+        /""""""""""""""""___/ ===        
+   ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~   
+        \______ o          __/            
+         \    \        __/             
+           \____\______/  
+```
