@@ -14,7 +14,7 @@ To get started quickly, you can use the quick start manifest which will install 
 
 ```bash
 kubectl create ns argo
-kubectl apply -n argo -f https://raw.githubusercontent.com/argoproj/argo/stable/manifests/quick-start-postgres.yaml
+kubectl apply -n argo -f quick-start-postgres.yaml
 ```
 
 If you are running Argo Workflows locally (e.g. using Minikube), open a port-forward so you can access the namespace:
