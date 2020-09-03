@@ -74,3 +74,4 @@ argo submit -n argo --watch dag-diamond.yaml
 
 Verify the change in the GUI.
 
+![alt text] (https://github.com/kartral21/argopoc/blob/master/dag.png)
