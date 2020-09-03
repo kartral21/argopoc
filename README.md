@@ -30,3 +30,11 @@ Next, Download the latest Argo CLI from releases page and test installation
 ```bash
 argo version
 ```
+## Submit Argo Workflows
+
+Finally, submit an example workflow:
+
+```bash
+argo submit -n argo --watch hello-world.yaml
+```
+
