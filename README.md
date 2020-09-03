@@ -1,1 +1,1 @@
-# Argo Proof of concept
+# Argo proof of concept
