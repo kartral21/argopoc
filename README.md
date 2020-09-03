@@ -30,7 +30,7 @@ Next, Download the latest Argo CLI from releases page and test installation
 ```bash
 argo version
 ```
-## Submit Argo Workflows
+## Submit Argo Workflows - Hello World
 
 Finally, submit an example workflow:
 
@@ -38,7 +38,7 @@ Finally, submit an example workflow:
 argo submit -n argo --watch hello-world.yaml
 ```
 
-## Verify Argo Workflows
+## Verify Argo Workflows - Hello World
 
 Argo adds a new kind of Kubernetes spec called a Workflow. The above spec contains a single template called whalesay which runs the docker/whalesay container and invokes cowsay "hello world". The whalesay template is the entrypoint for the spec. The entrypoint specifies the initial template that should be invoked when the workflow spec is executed by Kubernetes. 
 
@@ -59,3 +59,18 @@ argo logs -n argo @latest
          \    \        __/             
            \____\______/  
 ```
+
+## Submit Argo Workflows - DAG
+
+As an alternative to specifying sequences of steps, you can define the workflow as a directed-acyclic graph (DAG) by specifying the dependencies of each task. This can be simpler to maintain for complex workflows and allows for maximum parallelism when running tasks.
+
+In the following workflow, step A runs first, as it has no dependencies. Once A has finished, steps B and C run in parallel. Finally, once B and C have completed, step D can run.
+
+```bash
+argo submit -n argo --watch dag-diamond.yaml
+```
+
+## Verify Argo Workflows - DAG
+
+Verify the change in the GUI.
+
