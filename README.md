@@ -35,7 +35,7 @@ argo version
 Finally, submit an example workflow:
 
 ```bash
-argo submit -n argo --watch hello-world.yaml
+argo submit -n argo --watch hello-world.yml
 ```
 
 ## Verify Argo Workflows - Hello World
