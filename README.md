@@ -67,7 +67,7 @@ As an alternative to specifying sequences of steps, you can define the workflow 
 In the following workflow, step A runs first, as it has no dependencies. Once A has finished, steps B and C run in parallel. Finally, once B and C have completed, step D can run.
 
 ```bash
-argo submit -n argo --watch dag-diamond.yaml
+argo submit -n argo --watch dag-diamond.yml
 ```
 
 ## Verify Argo Workflows - DAG
